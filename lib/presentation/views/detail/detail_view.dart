@@ -170,7 +170,7 @@ class DetailView extends GetView<DetailController> {
             right: 30,
             child: Container(
               decoration: BoxDecoration(
-                color: Theme.of(context).primaryColor,
+                color: Theme.of(context).colorScheme.primaryContainer,
                 borderRadius: BorderRadius.circular(50),
               ),
               child: Row(
@@ -179,10 +179,10 @@ class DetailView extends GetView<DetailController> {
                       onPressed: () => controller.getImage(ImageSource.camera),
                       icon: Icon(
                         Icons.camera_alt,
-                        color: Theme.of(context).cardColor,
+                        color: Theme.of(context).colorScheme.onBackground,
                       )),
-                  const Divider(
-                    color: Colors.white,
+                  Divider(
+                    color: Theme.of(context).colorScheme.onBackground,
                     thickness: 3,
                     indent: 10,
                     endIndent: 10,
@@ -191,7 +191,7 @@ class DetailView extends GetView<DetailController> {
                       onPressed: () => controller.getImage(ImageSource.gallery),
                       icon: Icon(
                         Icons.image,
-                        color: Theme.of(context).cardColor,
+                        color: Theme.of(context).colorScheme.onBackground,
                       ))
                 ],
               ),
