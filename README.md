@@ -95,16 +95,8 @@ Hi, this is my personal Test for Tyba FrontEnd Developer position. I hope you li
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+To install and run the application you need to have Flutter installed. You can find the installation instructions [here](https://flutter.dev/docs/get-started/install).
 
-### Prerequisites
-
-Install Flutter 
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
 
 ### Installation
 
@@ -116,9 +108,9 @@ Install Flutter
    ```sh
    flutter pub get
    ```
-3. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
+3. Run the project
+   ```sh
+   flutter run
    ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

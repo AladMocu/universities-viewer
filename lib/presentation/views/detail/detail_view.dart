@@ -148,7 +148,7 @@ class DetailView extends GetView<DetailController> {
                         controller: controller.studentCountController,
                         keyboardType: TextInputType.number,
                         onChanged: (value) {
-                          controller.updateStudentCount(int.parse(value));
+                          controller.updateStudentCount(int.parse(value.isEmpty ? "0" : value));
                         },
                         inputFormatters: [
                           FilteringTextInputFormatter.digitsOnly,
