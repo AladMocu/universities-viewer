@@ -7,6 +7,9 @@ class University{
   List<String> domains;
   List<String> webPages;
 
+  String? photoPath;
+  int studentCount = 0;
+
   University({
     required this.alphaTwoCode,
     required this.country,

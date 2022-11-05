@@ -15,13 +15,26 @@ class GridItem extends StatelessWidget{
         onTap: (){
           Get.toNamed(Pages.detail, arguments: university);
         },
-        child: Column(
-          children: [
-            Text(university.name),
-            Text(university.country),
-            Text(university.alphaTwoCode),
-            Text(university.webPages[0]),
-          ],
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Stack(
+            children: [
+              Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Text(
+                    university.name,
+                    style: const TextStyle(
+                      fontSize: 18,
+                      
+                    ),
+                    textAlign: TextAlign.center,
+                  ),
+                ],
+              ),
+            ],
+          ),
         ),
       
     );

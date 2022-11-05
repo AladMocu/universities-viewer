@@ -23,7 +23,7 @@ class UniversityDTO{
       alphaTwoCode: json['alpha_two_code'],
       country: json['country'],
       stateProvince: json['state-province']??"",
-      name: json['name'],
+      name: (json['name'] as String).replaceAll("&amp;", "&"),
       domains: List<String>.from(json['domains']),
       webPages: List<String>.from(json['web_pages']),
     );

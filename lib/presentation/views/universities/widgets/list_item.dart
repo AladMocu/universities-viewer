@@ -10,20 +10,26 @@ class ListItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      child: InkWell(
+    return InkWell(
         onTap: () {
           Get.toNamed(Pages.detail, arguments: university);
         },
-        child: Column(
-          children: [
-            Text(university.name),
-            Text(university.country),
-            Text(university.alphaTwoCode),
-            Text(university.webPages[0]),
-          ],
+        child: Padding(
+          padding: const EdgeInsets.symmetric(vertical: 30),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Text(
+                university.name,
+                textAlign: TextAlign.center,
+                style: const TextStyle(
+                  fontSize: 18,
+                ),
+              ),
+            ],
+          ),
         ),
-      ),
     );
   }
 }
